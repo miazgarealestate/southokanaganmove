@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://southokanaganmove.ca/sitemap.xml
