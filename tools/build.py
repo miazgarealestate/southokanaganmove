@@ -196,6 +196,8 @@ def page(meta):
 <meta property="og:url" content="{url}"/>
 <meta property="og:image" content="{SITE}/{og}"/>
 <meta name="twitter:card" content="summary_large_image"/>
+<link rel="preload" href="/assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="stylesheet" href="/assets/css/brand.css"/>
 <link rel="stylesheet" href="/assets/css/site.css"/>
 {ld}</head>
 <body>

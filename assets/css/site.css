@@ -1,14 +1,15 @@
-/* South Okanagan Move — Warm Minimalist palette (approved Option 1) */
+/* South Okanagan Move site styles; tokens come from brand.css (loaded first) */
 :root{
-  --warm:#FAF9F6;      /* primary background */
-  --stone:#E9E5DE;     /* secondary backgrounds */
-  --taupe:#B5ADA2;     /* borders, supporting accents */
-  --charcoal:#303331;  /* headings, nav, primary buttons */
-  --gold:#A58A5A;      /* sparing highlights (never small text) */
-  --grey:#555955;      /* body text */
-  --white:#FFFFFF;     /* cards, button lettering */
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
-  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  /* South Okanagan Move — shared brand system v1.0 (see brand.css); legacy names now point at brand tokens */
+  --warm:var(--pm-white);        /* page background */
+  --stone:var(--pm-grey-light);  /* alternate sections, table heads */
+  --taupe:var(--pm-frost);       /* borders and rules */
+  --charcoal:var(--pm-navy);     /* headings, nav, dark text */
+  --gold:var(--pm-slate);        /* interactive accents and rules */
+  --grey:var(--pm-charcoal-blue);/* body text */
+  --white:var(--pm-white);
+  --serif:var(--pm-font-head);
+  --sans:var(--pm-font-body);
   --wrap:1120px;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -150,3 +151,29 @@ textarea{min-height:130px;resize:vertical}
   .form{padding:22px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ---- brand v1.0 refinements ---- */
+h1,h2,h3{font-weight:700;letter-spacing:-.01em}
+.brand{font-weight:800;letter-spacing:-.01em}
+a{color:var(--pm-slate)} a:hover{color:var(--pm-navy)}
+#nav a,.brand,.site-footer a,.crumbs a{color:var(--pm-navy)}
+#nav a:hover,#nav a[aria-current="page"]{color:var(--pm-slate)}
+.btn{background:var(--pm-slate);border-color:var(--pm-slate);color:var(--pm-white);border-radius:8px;font-family:var(--pm-font-head);font-weight:700}
+.btn:hover{background:var(--pm-navy);border-color:var(--pm-navy);color:var(--pm-white)}
+.btn-ghost{background:transparent;color:var(--pm-navy);border-color:var(--pm-navy)}
+.btn-ghost:hover{background:var(--pm-navy);color:var(--pm-white)}
+.card,.feature,.form,.callout{border-radius:12px}
+.card{box-shadow:var(--pm-shadow)} .card:hover{box-shadow:0 6px 20px rgba(12,15,36,.12)}
+.callout{background:var(--pm-frost);color:var(--pm-navy)}
+.cta-band{background:var(--pm-navy);color:var(--pm-frost)}
+.cta-band h2{color:var(--pm-white)} .cta-band .btn{background:var(--pm-white);border-color:var(--pm-white);color:var(--pm-navy)}
+.cta-band .btn:hover{background:var(--pm-frost);border-color:var(--pm-frost)}
+.site-footer{background:var(--pm-navy);color:var(--pm-frost);border-top:0}
+.site-footer h2,.site-footer a,.site-footer strong,.disclosure{color:var(--pm-white)}
+.site-footer a.btn{color:var(--pm-navy);background:var(--pm-white);border-color:var(--pm-white)}
+.legal{border-top-color:rgba(211,218,233,.3)}
+input,select,textarea{background:var(--pm-white);border:1.5px solid var(--pm-moss);border-radius:8px}
+input:focus,select:focus,textarea:focus{border-color:var(--pm-slate)}
+.eyebrow{color:var(--pm-moss);border-bottom-color:var(--pm-frost)}
+:focus-visible{outline-color:var(--pm-slate)}
+.site-footer .brand{color:var(--pm-white)} .site-footer .brand span{border-bottom-color:var(--pm-frost)}

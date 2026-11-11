@@ -1,0 +1,74 @@
+/* Pat Miazga Real Estate | eXp Realty Canada — shared brand system v1.0 (10 Nov 2026)
+   Self-hosted fonts: copy /fonts next to this file (or adjust the url() paths). */
+@font-face{font-family:"Manrope";font-weight:200 800;font-style:normal;font-display:swap;src:url("../fonts/manrope-latin-wght-normal.woff2") format("woff2")}
+@font-face{font-family:"Roboto";font-weight:400;font-style:normal;font-display:swap;src:url("../fonts/roboto-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Roboto";font-weight:400;font-style:italic;font-display:swap;src:url("../fonts/roboto-latin-400-italic.woff2") format("woff2")}
+@font-face{font-family:"Roboto";font-weight:500;font-style:normal;font-display:swap;src:url("../fonts/roboto-latin-500-normal.woff2") format("woff2")}
+@font-face{font-family:"Roboto";font-weight:700;font-style:normal;font-display:swap;src:url("../fonts/roboto-latin-700-normal.woff2") format("woff2")}
+
+:root{
+  /* colour tokens — primary */
+  --pm-black:#000000; --pm-navy:#0C0F24; --pm-grey-light:#EEEEEE; --pm-white:#FFFFFF;
+  /* colour tokens — secondary */
+  --pm-charcoal-blue:#31303F; --pm-moss:#686672; --pm-slate:#506CAA; --pm-frost:#D3DAE9;
+  /* semantic roles */
+  --pm-bg:var(--pm-white); --pm-bg-alt:var(--pm-grey-light); --pm-bg-accent:var(--pm-frost);
+  --pm-heading:var(--pm-navy); --pm-text:var(--pm-charcoal-blue); --pm-muted:var(--pm-moss);
+  --pm-link:var(--pm-slate); --pm-link-hover:var(--pm-navy);
+  --pm-border:var(--pm-frost); --pm-focus:var(--pm-slate);
+  /* type */
+  --pm-font-head:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --pm-font-body:"Roboto",system-ui,-apple-system,"Segoe UI",sans-serif;
+  /* scale */
+  --pm-fs-body:1.0625rem; --pm-lh-body:1.65;
+  --pm-fs-h1:clamp(2rem,4.2vw,3.1rem); --pm-fs-h2:clamp(1.5rem,2.6vw,2rem); --pm-fs-h3:1.2rem; --pm-fs-small:.875rem;
+  /* spacing / shape */
+  --pm-s1:.5rem; --pm-s2:1rem; --pm-s3:1.5rem; --pm-s4:2.5rem; --pm-s5:4rem; --pm-s6:6rem;
+  --pm-radius:8px; --pm-radius-lg:12px; --pm-wrap:1120px;
+  --pm-shadow:0 1px 2px rgba(12,15,36,.06),0 4px 14px rgba(12,15,36,.06);
+}
+
+/* base */
+.pm, .pm body{font-family:var(--pm-font-body)}
+.pm-body{font-family:var(--pm-font-body);font-size:var(--pm-fs-body);line-height:var(--pm-lh-body);color:var(--pm-text);background:var(--pm-bg)}
+.pm-h1,.pm-h2,.pm-h3{font-family:var(--pm-font-head);color:var(--pm-heading);font-weight:700;letter-spacing:-.01em;line-height:1.18}
+.pm-h1{font-size:var(--pm-fs-h1)} .pm-h2{font-size:var(--pm-fs-h2)} .pm-h3{font-size:var(--pm-fs-h3);font-weight:600}
+.pm-eyebrow{font-family:var(--pm-font-head);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pm-muted)}
+.pm-link{color:var(--pm-link);text-underline-offset:3px} .pm-link:hover{color:var(--pm-link-hover)}
+:where(a,button,input,select,textarea):focus-visible{outline:3px solid var(--pm-focus);outline-offset:2px}
+
+/* buttons: primary = slate (interactive) w/ white text; secondary = navy outline; dark = navy */
+.pm-btn{display:inline-block;font-family:var(--pm-font-head);font-weight:700;font-size:.95rem;line-height:1;padding:.95rem 1.5rem;border-radius:var(--pm-radius);border:2px solid var(--pm-slate);background:var(--pm-slate);color:var(--pm-white);text-decoration:none;cursor:pointer;min-height:44px}
+.pm-btn:hover{background:var(--pm-navy);border-color:var(--pm-navy)}
+.pm-btn--ghost{background:transparent;color:var(--pm-navy);border-color:var(--pm-navy)}
+.pm-btn--ghost:hover{background:var(--pm-navy);color:var(--pm-white)}
+.pm-btn--on-dark{background:var(--pm-white);border-color:var(--pm-white);color:var(--pm-navy)}
+.pm-btn--on-dark:hover{background:var(--pm-frost);border-color:var(--pm-frost)}
+
+/* header: white, 1px frost rule, navy wordmark, slate CTA */
+.pm-header{background:var(--pm-white);border-bottom:1px solid var(--pm-frost)}
+.pm-nav a{font-family:var(--pm-font-head);font-weight:600;font-size:.92rem;color:var(--pm-navy);text-decoration:none}
+.pm-nav a:hover,.pm-nav a[aria-current="page"]{color:var(--pm-slate);text-decoration:underline;text-underline-offset:6px}
+
+/* footer: navy, white/frost text. Brokerage identification stays at full size and contrast. */
+.pm-footer{background:var(--pm-navy);color:var(--pm-frost);font-size:.95rem}
+.pm-footer a{color:var(--pm-white)} .pm-footer h2{font-family:var(--pm-font-head);color:var(--pm-white);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.pm-footer .pm-brokerage{color:var(--pm-white);font-weight:500}
+
+/* card */
+.pm-card{background:var(--pm-white);border:1px solid var(--pm-frost);border-radius:var(--pm-radius-lg);overflow:hidden;box-shadow:var(--pm-shadow)}
+.pm-card img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.pm-card__body{padding:var(--pm-s3)}
+.pm-callout{background:var(--pm-frost);border-left:4px solid var(--pm-slate);border-radius:0 var(--pm-radius) var(--pm-radius) 0;padding:var(--pm-s3);color:var(--pm-navy)}
+
+/* form */
+.pm-field label{display:block;font-family:var(--pm-font-head);font-weight:600;font-size:.88rem;color:var(--pm-navy);margin-bottom:.35rem}
+.pm-field input,.pm-field select,.pm-field textarea{width:100%;font:inherit;color:var(--pm-navy);background:var(--pm-white);border:1.5px solid var(--pm-moss);border-radius:var(--pm-radius);padding:.8rem .9rem;min-height:44px}
+.pm-field input:focus,.pm-field select:focus,.pm-field textarea:focus{border-color:var(--pm-slate);outline:3px solid var(--pm-frost)}
+.pm-field [aria-invalid="true"]{border-color:#B3261E}
+.pm-note{font-size:var(--pm-fs-small);color:var(--pm-muted)}
+
+/* sections */
+.pm-section{padding:var(--pm-s5) 0} .pm-section--alt{background:var(--pm-grey-light)} .pm-section--dark{background:var(--pm-navy);color:var(--pm-frost)}
+@media (max-width:900px){.pm-section{padding:var(--pm-s4) 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
