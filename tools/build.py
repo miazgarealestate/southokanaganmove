@@ -83,7 +83,7 @@ def expand(fragment):
         eager = len(parts) > 3 and parts[3] == 'eager'
         return img(name, alt, sizes, eager=eager)
     fragment = re.sub(r'\{\{img:([^}]+)\}\}', rep, fragment)
-    return fragment.replace('{{form}}', FORM)
+    return fragment.replace('{{form}}', FORM).replace('{{brokerage}}', brokerage_block(False))
 
 
 def parse(path):
@@ -109,6 +109,22 @@ def header(current):
 </div></header>'''
 
 
+BROKER_LINES = '''<div class="pm-brokerage-block__text">
+<p class="name">Pat Miazga, REALTOR®</p>
+<p>eXp Realty (eXp Realty of Canada, Inc.)</p>
+<p>645 Main Street, Penticton, BC V2A 5C9 &middot; Brokerage phone (833) 817-6506</p>
+<p>BCFSA licence #138735</p></div>'''
+
+
+def brokerage_block(dark=True):
+    """Prominent brokerage identification. Logo is included only if the official eXp Canada file is present."""
+    fn = 'exp-realty-logo-white.svg' if dark else 'exp-realty-logo-black.svg'
+    logo = ''
+    if os.path.exists(os.path.join(ROOT, 'assets', 'img', fn)):
+        logo = f'<img class="pm-brokerage-block__logo" src="/assets/img/{fn}" alt="eXp Realty" height="48"/>'
+    return f'<div class="pm-brokerage-block{"" if dark else " pm-brokerage-block--light"}">{logo}{BROKER_LINES}</div>'
+
+
 def footer():
     links = ''.join(f'<li><a href="{u}">{esc(t)}</a></li>' for u, t in FOOT)
     return f'''<footer class="site-footer"><div class="wrap">
@@ -120,7 +136,7 @@ def footer():
 <p><a class="btn btn-sm" href="/contact/">Planning a move? Ask Pat.</a></p></div>
 </div>
 <div class="legal">
-<p class="disclosure"><strong>Pat Miazga, REALTOR®</strong> &middot; <strong>eXp Realty</strong> (eXp Realty of Canada, Inc.)</p>
+{brokerage_block(True)}
 <p>Information on this website is general in nature and is not legal, tax, financial or engineering advice. Confirm details with the relevant authority or a qualified professional before relying on them.</p>
 </div></div></footer>'''
 

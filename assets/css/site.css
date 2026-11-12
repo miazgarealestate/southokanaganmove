@@ -177,3 +177,22 @@ input:focus,select:focus,textarea:focus{border-color:var(--pm-slate)}
 .eyebrow{color:var(--pm-moss);border-bottom-color:var(--pm-frost)}
 :focus-visible{outline-color:var(--pm-slate)}
 .site-footer .brand{color:var(--pm-white)} .site-footer .brand span{border-bottom-color:var(--pm-frost)}
+
+/* ---- brand v1.1: links, focus, status, brokerage block ---- */
+.prose a,.lede a,.sources a,.card .more,.feature a,.callout a,.crumbs a,.note a,.consent a,.legal a{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px;text-decoration-color:currentColor}
+.prose a,.lede a,.sources a,.feature a,.note a,.consent a,.card .more{color:var(--pm-slate)}
+.section.alt a:not(.btn),.callout a:not(.btn),.keyfacts th a{color:var(--pm-navy)}
+.site-footer a:not(.btn),.cta-band a:not(.btn){color:var(--pm-white)}
+:focus-visible{outline:3px solid var(--pm-slate);outline-offset:3px}
+.section.alt :focus-visible,.callout :focus-visible{outline-color:var(--pm-navy)}
+.site-footer :focus-visible,.cta-band :focus-visible{outline-color:var(--pm-white)}
+.site-footer .pm-brokerage-block{padding-top:6px}
+.about-split .pm-brokerage-block{margin:.5em 0 1.2em}
+.field .err{color:var(--pm-status-error);font-size:.88rem}
+h1,h2,h3,.brand{font-weight:800}
+body{font-weight:400}
+.routes{margin:1.4em 0 0;font-size:.95rem;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+.routes span{font-family:var(--pm-font-head);font-weight:800;color:var(--pm-navy);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+.routes a{color:var(--pm-slate);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
+.site-footer a,.cta-band a{text-decoration-color:currentColor}
+.site-footer .pm-brokerage-block{margin-bottom:1.2em}
