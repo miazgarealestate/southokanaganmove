@@ -112,11 +112,17 @@ def header(current):
 </div></header>'''
 
 
-BROKER_LINES = '''<div class="pm-brokerage-block__text">
-<p class="name">Pat Miazga, REALTOR®</p>
-<p>eXp Realty (eXp Realty of Canada, Inc.)</p>
-<p>645 Main Street, Penticton, BC V2A 5C9 &middot; Brokerage phone (833) 817-6506</p>
-<p>BCFSA licence #138735</p></div>'''
+# Single verified brokerage record (tools/brokerage.json; same file as brand-system/brokerage.json)
+BR = json.load(open(os.path.join(ROOT, 'tools', 'brokerage.json'), encoding='utf-8'))
+_email = f"<p>{BR['email']}</p>" if BR.get('email_verified') else ''   # email only after send/receive is verified
+BROKER_LINES = (f'<div class="pm-brokerage-block__text">\n<p class="name">{BR["agent_display_name"]}, {BR["agent_title"]}</p>\n'
+                f'<p>{BR["brokerage_display_name"]} ({BR["brokerage_legal_name"]})</p>\n'
+                f'<p>{BR["street"]}, {BR["city"]}, {BR["province"]} {BR["postal"]} &middot; Brokerage phone {BR["brokerage_phone"]}</p>\n'
+                f'<p>BCFSA licence #{BR["agent_licence_number"]}</p>{_email}</div>')
+WORKS_FOR = {"@type": "Organization", "name": BR["brokerage_legal_name"], "alternateName": BR["brokerage_display_name"],
+             "telephone": BR["brokerage_phone"],
+             "address": {"@type": "PostalAddress", "streetAddress": BR["street"], "addressLocality": BR["city"],
+                         "addressRegion": BR["province"], "postalCode": BR["postal"], "addressCountry": "CA"}}
 
 
 def brokerage_block(dark=True):
@@ -153,7 +159,7 @@ def jsonld(meta, url):
             {"@type": "Organization", "@id": SITE + "/#org", "name": "South Okanagan Move", "url": SITE + "/"},
             {"@type": "Person", "@id": SITE + "/#pat", "name": "Pat Miazga", "jobTitle": "REALTOR®",
              "url": SITE + "/about/", "knowsLanguage": ["English", "Polish"],
-             "worksFor": {"@type": "Organization", "name": "eXp Realty of Canada, Inc."}},
+             "worksFor": WORKS_FOR},
         ]
     else:
         crumbs = [("Home", SITE + "/")]
@@ -166,7 +172,7 @@ def jsonld(meta, url):
         if meta['slug'] == 'about':
             graph.append({"@type": "Person", "@id": SITE + "/#pat", "name": "Pat Miazga", "jobTitle": "REALTOR®",
                           "url": url, "knowsLanguage": ["English", "Polish"],
-                          "worksFor": {"@type": "Organization", "name": "eXp Realty of Canada, Inc."}})
+                          "worksFor": WORKS_FOR})
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
 
 

@@ -1,0 +1,24 @@
+{
+  "_note": "Single source for brokerage identification. Staging build, structured data, marketing masters and spec read this file. Change here only.",
+  "agent_display_name": "Pat Miazga",
+  "agent_title": "REALTOR®",
+  "agent_licence_number": "138735",
+  "agent_phone": "604-562-5982",
+  "brokerage_display_name": "eXp Realty",
+  "brokerage_legal_name": "eXp Realty of Canada, Inc.",
+  "branch_licence_number": "X035320",
+  "branch_licensed_as": "Branch Office (Trading)",
+  "street": "645 Main Street",
+  "city": "Penticton",
+  "province": "BC",
+  "postal": "V2A 5C9",
+  "brokerage_phone": "(833) 817-6506",
+  "managing_broker": "Michael John Wood",
+  "email": "pat.miazga@exprealty.com",
+  "email_verified": false,
+  "verification": {
+    "date": "2026-11-12",
+    "status": "VERIFIED against BCFSA public registry for the legal name, branch address, phone and licence; PARTIALLY VERIFIED for Pat's association with this branch (his licensee record 138735 shows business name eXp Realty at the same address and phone; the branch page lists the managing broker). Transfer date and approved public wording still need managing-broker confirmation.",
+    "sources": ["https://www.bcfsa.ca/re-brokerage/X035320 (licence effective 3 Feb 2026, expiry 2 Feb 2028, Licensed, no conditions)", "https://www.bcfsa.ca/re-licencee/138735 (viewed earlier on 12 Nov 2026; effective 6 Nov 2026)"]
+  }
+}
