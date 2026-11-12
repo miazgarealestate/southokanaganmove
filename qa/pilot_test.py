@@ -18,7 +18,7 @@ env=dict(os.environ,FORM_ACTION=f'http://127.0.0.1:{rport}/s',FORM_NEXT=f'http:/
 subprocess.run([sys.executable,'tools/build.py'],cwd=work,env=env,check=True,stdout=subprocess.DEVNULL)
 srv=subprocess.Popen([sys.executable,'-m','http.server',str(sport)],cwd=work,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL);time.sleep(1)
 B=f'http://127.0.0.1:{sport}'; res={}
-GUIDES=['guides/','guides/rendezvous-beach-resort/','guides/manufactured-homes/','guides/well-water-septic-rural-inspections/']
+GUIDES=['guides/','guides/manufactured-homes/','guides/well-water-septic-rural-inspections/']
 with sync_playwright() as p:
     br=p.chromium.launch()
     for vp,(w,h) in {'desktop':(1280,900),'mobile':(390,844)}.items():
