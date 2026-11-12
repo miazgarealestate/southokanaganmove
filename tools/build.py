@@ -124,7 +124,7 @@ def brokerage_block(dark=True):
     fn = 'exp-realty-logo-white.svg' if dark else 'exp-realty-logo-black.svg'
     logo = ''
     if os.path.exists(os.path.join(ROOT, 'assets', 'img', fn)):
-        logo = f'<img class="pm-brokerage-block__logo" src="/assets/img/{fn}" alt="eXp Realty" height="48"/>'
+        logo = f'<img class="pm-brokerage-block__logo" src="/assets/img/{fn}" alt="eXp Realty" width="108" height="56"/>'
     return f'<div class="pm-brokerage-block{"" if dark else " pm-brokerage-block--light"}">{logo}{BROKER_LINES}</div>'
 
 

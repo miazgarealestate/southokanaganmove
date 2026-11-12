@@ -68,8 +68,8 @@
 .pm-footer h2{font-family:var(--pm-font-head);font-weight:800;color:var(--pm-white);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
 
 /* REQUIRED brokerage identification block: footer of every page + About. Never smaller than body text, never lower contrast than body text. */
-.pm-brokerage-block{display:flex;gap:24px;align-items:center;flex-wrap:wrap;color:var(--pm-white);font-size:1rem;line-height:1.5}
-.pm-brokerage-block__logo{display:block;height:48px;width:auto}              /* official eXp Canada logo file, white on navy / black on light; unmodified */
+.pm-brokerage-block{display:flex;gap:32px;align-items:center;flex-wrap:wrap;color:var(--pm-white);font-size:1rem;line-height:1.5}
+.pm-brokerage-block__logo{display:block;height:56px!important;width:108px!important;max-width:108px;min-width:60px;margin:var(--pm-logo-clear,31px) 0}              /* official eXp Canada logo file, white on navy / black on light; unmodified */
 .pm-brokerage-block__logo-slot{min-width:120px;min-height:48px}               /* reserve space equal to logo clear-space: width and height of the "e" on all sides */
 .pm-brokerage-block p{margin:0 0 .15em}
 .pm-brokerage-block .name{font-family:var(--pm-font-head);font-weight:800}
