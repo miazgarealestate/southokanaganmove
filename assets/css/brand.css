@@ -17,7 +17,7 @@
   /* semantic roles */
   --pm-bg:var(--pm-white); --pm-bg-alt:var(--pm-grey-light); --pm-bg-accent:var(--pm-frost);
   --pm-heading:var(--pm-navy); --pm-text:var(--pm-charcoal-blue); --pm-muted:var(--pm-moss);
-  --pm-link:var(--pm-slate); --pm-link-on-alt:var(--pm-navy); --pm-link-hover:var(--pm-navy);
+  
   --pm-border:var(--pm-frost); --pm-focus-light:var(--pm-slate); --pm-focus-alt:var(--pm-navy); --pm-focus-dark:var(--pm-white);
   /* status roles (documented exception to the eight-colour palette; validation and status messages ONLY) */
   --pm-status-error:#B3261E;   /* 6.5:1 on white */
@@ -38,11 +38,14 @@
 .pm-h1{font-size:var(--pm-fs-h1)} .pm-h2{font-size:var(--pm-fs-h2)} .pm-h3{font-size:var(--pm-fs-h3);font-weight:800}
 .pm-eyebrow{font-family:var(--pm-font-head);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--pm-muted)}
 
-/* links: always underlined. Slate on white; Navy on Light Grey and Frosted Blue surfaces; White/Frost on dark. */
-.pm-body a:not(.pm-btn):not(.pm-nav a),.pm-link{color:var(--pm-link);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px}
-.pm-body a:not(.pm-btn):hover,.pm-link:hover{color:var(--pm-link-hover);text-decoration-thickness:2.5px}
-.pm-section--alt a:not(.pm-btn),.pm-callout a:not(.pm-btn),.pm-surface-frost a:not(.pm-btn){color:var(--pm-link-on-alt)}
-.pm-section--dark a:not(.pm-btn),.pm-footer a:not(.pm-btn){color:var(--pm-white)}
+/* links: always underlined. Colour comes ONLY from --pm-link / --pm-link-hover, which each surface sets (nearest surface wins).
+   Default surface (white): Slate -> Navy on hover. Light Grey / Frosted Blue: Navy -> Navy. Dark Navy / footer: White -> Frost.
+   One selector priority for every state, so hover can never override the surface colour. */
+.pm-body{--pm-link-now:var(--pm-slate);--pm-link-hover-now:var(--pm-navy)}
+.pm-section--alt,.pm-callout,.pm-surface-frost{--pm-link-now:var(--pm-navy);--pm-link-hover-now:var(--pm-navy)}
+.pm-section--dark,.pm-footer,.pm-surface-dark{--pm-link-now:var(--pm-white);--pm-link-hover-now:var(--pm-frost)}
+.pm-body a:not(.pm-btn):not(.pm-nav a),.pm-link{color:var(--pm-link-now);text-decoration:underline;text-decoration-color:currentColor;text-decoration-thickness:1.5px;text-underline-offset:3px}
+.pm-body a:not(.pm-btn):not(.pm-nav a):hover,.pm-link:hover{color:var(--pm-link-hover-now);text-decoration-thickness:2.5px}
 
 /* focus: visible on every surface */
 :where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid var(--pm-focus-light);outline-offset:3px;border-radius:2px}

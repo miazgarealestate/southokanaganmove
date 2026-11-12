@@ -155,7 +155,6 @@ textarea{min-height:130px;resize:vertical}
 /* ---- brand v1.0 refinements ---- */
 h1,h2,h3{font-weight:700;letter-spacing:-.01em}
 .brand{font-weight:800;letter-spacing:-.01em}
-a{color:var(--pm-slate)} a:hover{color:var(--pm-navy)}
 #nav a,.brand,.site-footer a,.crumbs a{color:var(--pm-navy)}
 #nav a:hover,#nav a[aria-current="page"]{color:var(--pm-slate)}
 .btn{background:var(--pm-slate);border-color:var(--pm-slate);color:var(--pm-white);border-radius:8px;font-family:var(--pm-font-head);font-weight:700}
@@ -179,10 +178,6 @@ input:focus,select:focus,textarea:focus{border-color:var(--pm-slate)}
 .site-footer .brand{color:var(--pm-white)} .site-footer .brand span{border-bottom-color:var(--pm-frost)}
 
 /* ---- brand v1.1: links, focus, status, brokerage block ---- */
-.prose a,.lede a,.sources a,.card .more,.feature a,.callout a,.crumbs a,.note a,.consent a,.legal a{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px;text-decoration-color:currentColor}
-.prose a,.lede a,.sources a,.feature a,.note a,.consent a,.card .more{color:var(--pm-slate)}
-.section.alt a:not(.btn),.callout a:not(.btn),.keyfacts th a{color:var(--pm-navy)}
-.site-footer a:not(.btn),.cta-band a:not(.btn){color:var(--pm-white)}
 :focus-visible{outline:3px solid var(--pm-slate);outline-offset:3px}
 .section.alt :focus-visible,.callout :focus-visible{outline-color:var(--pm-navy)}
 .site-footer :focus-visible,.cta-band :focus-visible{outline-color:var(--pm-white)}
@@ -194,5 +189,13 @@ body{font-weight:400}
 .routes{margin:1.4em 0 0;font-size:.95rem;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
 .routes span{font-family:var(--pm-font-head);font-weight:800;color:var(--pm-navy);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
 .routes a{color:var(--pm-slate);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
-.site-footer a,.cta-band a{text-decoration-color:currentColor}
 .site-footer .pm-brokerage-block{margin-bottom:1.2em}
+
+/* ---- brand v1.2: surface-specific link + hover colours, one selector priority for every state ----
+   Colour comes only from --link / --link-hover, set by the nearest surface. White: Slate -> Navy. Alt/callout/Frost: Navy -> Navy.
+   Dark Navy (footer, CTA band): White -> Frost. Hover therefore can never turn text Navy on Navy. */
+body{--link:var(--pm-slate);--link-hover:var(--pm-navy)}
+.section.alt,.callout,.keyfacts{--link:var(--pm-navy);--link-hover:var(--pm-navy)}
+.site-footer,.cta-band{--link:var(--pm-white);--link-hover:var(--pm-frost)}
+.prose a:not(.btn),.lede a:not(.btn),.sources a:not(.btn),.card .more,.feature a:not(.btn),.callout a:not(.btn),.crumbs a:not(.btn),.note a:not(.btn),.consent a:not(.btn),.legal a:not(.btn),.keyfacts a:not(.btn),.routes a:not(.btn),.section a:not(.btn):not(.card),.site-footer a:not(.btn),.cta-band a:not(.btn){color:var(--link);text-decoration:underline;text-decoration-color:currentColor;text-decoration-thickness:1.5px;text-underline-offset:3px}
+.prose a:not(.btn):hover,.lede a:not(.btn):hover,.sources a:not(.btn):hover,.card .more:hover,.feature a:not(.btn):hover,.callout a:not(.btn):hover,.crumbs a:not(.btn):hover,.note a:not(.btn):hover,.consent a:not(.btn):hover,.legal a:not(.btn):hover,.keyfacts a:not(.btn):hover,.routes a:not(.btn):hover,.section a:not(.btn):not(.card):hover,.site-footer a:not(.btn):hover,.cta-band a:not(.btn):hover{color:var(--link-hover);text-decoration-thickness:2.5px}

@@ -51,10 +51,13 @@ def img(name, alt, sizes='(max-width:900px) 100vw, 560px', cls='', eager=False):
             f'width="{w}" height="{h}" alt="{esc(alt)}" loading="{load}" decoding="async"/>')
 
 
-FORM = '''<form class="form" action="https://formspree.io/f/xzdqkvra" method="POST">
+# Staging override: FORM_ACTION / FORM_NEXT env vars point the form at a test endpoint. Defaults are production values.
+FORM_ACTION = os.environ.get('FORM_ACTION', 'https://formspree.io/f/xzdqkvra')
+FORM_NEXT = os.environ.get('FORM_NEXT', 'https://southokanaganmove.ca/contact/thank-you/')
+FORM = '''<form class="form" action="__FORM_ACTION__" method="POST">
 <input type="hidden" name="_subject" value="southokanaganmove.ca inquiry"/>
 <input type="hidden" name="source" value="southokanaganmove.ca"/>
-<input type="hidden" name="_next" value="https://southokanaganmove.ca/contact/thank-you/"/>
+<input type="hidden" name="_next" value="__FORM_NEXT__"/>
 <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"/></label></div>
 <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required/></div>
 <div class="row">
@@ -83,7 +86,7 @@ def expand(fragment):
         eager = len(parts) > 3 and parts[3] == 'eager'
         return img(name, alt, sizes, eager=eager)
     fragment = re.sub(r'\{\{img:([^}]+)\}\}', rep, fragment)
-    return fragment.replace('{{form}}', FORM).replace('{{brokerage}}', brokerage_block(False))
+    return fragment.replace('{{form}}', FORM.replace('__FORM_ACTION__', FORM_ACTION).replace('__FORM_NEXT__', FORM_NEXT)).replace('{{brokerage}}', brokerage_block(False))
 
 
 def parse(path):
