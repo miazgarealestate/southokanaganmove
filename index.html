@@ -2,550 +2,155 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>South Okanagan Real Estate &amp; Relocation | Pat Miazga, eXp Realty</title>
-<meta name="description" content="Real estate and relocation help in Osoyoos, Oliver, Penticton, Okanagan Falls and Anarchist Mountain with REALTOR® Pat Miazga of eXp Realty. Straightforward, low-pressure guidance."/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Find Your Place in the South Okanagan | South Okanagan Move</title>
+<meta name="description" content="Practical guidance for buying property, relocating, and living in Osoyoos, Oliver, and the South Okanagan, from REALTOR® Pat Miazga of eXp Realty."/>
 <link rel="canonical" href="https://southokanaganmove.ca/"/>
-<meta property="og:title" content="Your Move to the South Okanagan Starts Here | Pat Miazga, eXp Realty"/>
-<meta property="og:description" content="Real estate and relocation help across the South Okanagan with REALTOR® Pat Miazga of eXp Realty."/>
-<meta property="og:url" content="https://southokanaganmove.ca/"/>
 <meta property="og:type" content="website"/>
+<meta property="og:site_name" content="South Okanagan Move"/>
+<meta property="og:title" content="Find Your Place in the South Okanagan | South Okanagan Move"/>
+<meta property="og:description" content="Practical guidance for buying property, relocating, and living in Osoyoos, Oliver, and the South Okanagan, from REALTOR® Pat Miazga of eXp Realty."/>
+<meta property="og:url" content="https://southokanaganmove.ca/"/>
 <meta property="og:image" content="https://southokanaganmove.ca/images/vineyard-escarpment-lake-wide.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"RealEstateAgent","@id":"https://southokanaganmove.ca/#pat","name":"Pat Miazga","jobTitle":"REALTOR®","url":"https://southokanaganmove.ca/","image":"https://southokanaganmove.ca/images/pat-miazga-realtor-portrait.jpg","telephone":"+16045625982","worksFor":{"@type":"Organization","name":"eXp Realty"},"areaServed":["Osoyoos","Oliver","Penticton","Okanagan Falls","Anarchist Mountain","South Okanagan"],"knowsLanguage":["English","Polish"]}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --ink:#1a1a18;
-  --stone:#3d3d38;
-  --mid:#7a7468;
-  --sand:#c8b89a;
-  --sand-light:#e8ddd0;
-  --cream:#f7f4ef;
-  --white:#ffffff;
-  --accent:#8b6f47;
-  --accent-dark:#6b5235;
-  --border:#e2ddd6;
-  --peer:#f0ede8;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:var(--stone);background:var(--cream);overflow-x:hidden}
-
-/* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:20px 40px;
-  transition:background 0.4s,backdrop-filter 0.4s,padding 0.3s;
-}
-nav.scrolled{
-  background:rgba(26,26,24,0.93);
-  backdrop-filter:blur(12px);
-  padding:14px 40px;
-}
-.nav-logo{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.1rem;font-weight:500;
-  color:var(--white);text-decoration:none;letter-spacing:0.02em;
-}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{
-  color:rgba(255,255,255,0.82);text-decoration:none;
-  font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;
-  transition:color 0.2s;
-}
-.nav-links a:hover{color:var(--sand)}
-.nav-cta{
-  background:var(--accent);color:var(--white);
-  padding:9px 22px;border-radius:2px;
-  text-decoration:none;font-size:0.78rem;font-weight:600;
-  letter-spacing:0.06em;text-transform:uppercase;
-  transition:background 0.2s;
-}
-.nav-cta:hover{background:var(--accent-dark)}
-
-/* HERO */
-.hero{
-  position:relative;height:100vh;min-height:620px;
-  display:flex;align-items:center;justify-content:center;overflow:hidden;
-}
-.hero-bg{
-  position:absolute;inset:0;
-  background-image:url('images/vineyard-escarpment-lake-wide.jpg');
-  background-size:cover;background-position:center 40%;
-  will-change:transform;
-}
-.hero-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to bottom,rgba(10,10,8,0.2) 0%,rgba(10,10,8,0.55) 55%,rgba(10,10,8,0.78) 100%);
-}
-.hero-content{
-  position:relative;z-index:2;text-align:center;
-  padding:0 24px;max-width:900px;
-}
-.hero-eyebrow{
-  display:inline-block;font-size:0.7rem;font-weight:600;
-  letter-spacing:0.18em;text-transform:uppercase;color:var(--sand);
-  margin-bottom:24px;opacity:0;animation:fadeUp 0.8s 0.3s forwards;
-}
-.hero-headline{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2.8rem,7vw,5.5rem);
-  font-weight:500;line-height:1.08;color:var(--white);
-  margin-bottom:24px;opacity:0;animation:fadeUp 0.8s 0.5s forwards;
-}
-.hero-headline em{font-style:italic;color:var(--sand)}
-.hero-sub{
-  font-size:clamp(0.95rem,2vw,1.12rem);
-  color:rgba(255,255,255,0.8);font-weight:300;line-height:1.68;
-  max-width:620px;margin:0 auto 40px;
-  opacity:0;animation:fadeUp 0.8s 0.7s forwards;
-}
-.hero-actions{
-  display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
-  opacity:0;animation:fadeUp 0.8s 0.9s forwards;
-}
-.btn-primary{
-  background:var(--accent);color:var(--white);
-  padding:14px 32px;border-radius:2px;text-decoration:none;
-  font-size:0.83rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;
-  transition:background 0.2s,transform 0.15s;display:inline-block;
-}
-.btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
-.btn-ghost{
-  border:1.5px solid rgba(255,255,255,0.45);color:var(--white);
-  padding:14px 32px;border-radius:2px;text-decoration:none;
-  font-size:0.83rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;
-  transition:border-color 0.2s,background 0.2s;
-}
-.btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,0.07)}
-.hero-scroll{
-  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:8px;
-  color:rgba(255,255,255,0.45);font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;
-  opacity:0;animation:fadeUp 0.8s 1.2s forwards;
-}
-.scroll-line{
-  width:1px;height:38px;
-  background:linear-gradient(to bottom,rgba(255,255,255,0.35),transparent);
-  animation:pulse 2s ease-in-out infinite;
-}
-
-/* STAT RIBBON */
-.stat-ribbon{
-  background:var(--ink);padding:32px 40px;
-  display:flex;justify-content:center;flex-wrap:wrap;
-}
-.stat-item{
-  text-align:center;padding:14px 44px;
-  border-right:1px solid rgba(255,255,255,0.07);
-}
-.stat-item:last-child{border-right:none}
-.stat-num{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.3rem;font-weight:500;color:var(--sand);
-  display:block;line-height:1;margin-bottom:5px;
-}
-.stat-label{
-  font-size:0.68rem;font-weight:500;
-  letter-spacing:0.1em;text-transform:uppercase;
-  color:rgba(255,255,255,0.38);
-}
-
-/* SECTIONS */
-.section{padding:96px 40px}
-.section-inner{max-width:1100px;margin:0 auto}
-.eyebrow{
-  font-size:0.68rem;font-weight:600;letter-spacing:0.18em;
-  text-transform:uppercase;color:var(--accent);
-  margin-bottom:14px;display:block;
-}
-.section-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2rem,4vw,3rem);font-weight:500;line-height:1.18;
-  color:var(--ink);margin-bottom:18px;
-}
-.section-title em{font-style:italic;color:var(--accent)}
-.section-intro{font-size:1rem;line-height:1.78;color:var(--stone);max-width:620px}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.7s,transform 0.7s}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
-/* WHY MOVE */
-.why-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:0;
-  margin-top:60px;border:1px solid var(--border);
-}
-.why-card{
-  padding:44px 36px;
-  border-right:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-}
-.why-card:nth-child(even){border-right:none}
-.why-card:nth-child(3),.why-card:nth-child(4){border-bottom:none}
-.why-num{
-  font-family:'Cormorant Garamond',serif;
-  font-size:3.5rem;font-weight:400;color:var(--sand-light);
-  line-height:1;margin-bottom:14px;
-}
-.why-card h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.45rem;font-weight:600;color:var(--ink);margin-bottom:10px;
-}
-.why-card p{font-size:0.88rem;line-height:1.72;color:var(--stone)}
-
-/* COMPARISON */
-.cmp-section{background:var(--ink);padding:96px 40px}
-.cmp-section .section-title{color:var(--white)}
-.cmp-section .section-intro{color:rgba(255,255,255,0.55)}
-.cmp-section .eyebrow{color:var(--sand)}
-.cmp-label{
-  font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
-  color:rgba(255,255,255,0.28);margin-bottom:18px;margin-top:52px;display:block;
-}
-.cmp-grid{
-  display:grid;grid-template-columns:1fr 56px 1fr;gap:0;align-items:stretch;
-}
-.cmp-col{
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);border-radius:2px;
-}
-.cmp-col.theirs{background:rgba(255,255,255,0.02)}
-.cmp-head{
-  padding:24px 28px;border-bottom:1px solid rgba(255,255,255,0.08);
-  display:flex;align-items:center;gap:10px;
-}
-.cmp-city{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.4rem;font-weight:500;color:var(--white);
-}
-.tag{
-  font-size:0.62rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
-  padding:4px 9px;border-radius:20px;
-}
-.tag-them{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.38)}
-.tag-so{background:var(--accent);color:var(--white)}
-.cmp-vs{
-  display:flex;align-items:center;justify-content:center;
-}
-.vs-badge{
-  width:42px;height:42px;border-radius:50%;background:var(--accent);
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.7rem;font-weight:700;color:var(--white);letter-spacing:0.04em;
-}
-.cmp-row{
-  display:flex;justify-content:space-between;align-items:flex-end;
-  padding:18px 28px;border-bottom:1px solid rgba(255,255,255,0.05);
-}
-.cmp-row:last-child{border-bottom:none}
-.cmp-row-label{font-size:0.7rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.3)}
-.cmp-val{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:500;color:var(--white);text-align:right}
-.cmp-val.hi{color:var(--sand)}
-.cmp-sub{font-size:0.68rem;color:rgba(255,255,255,0.3);margin-top:2px;text-align:right}
-
-/* PHOTO BREAK */
-.photo-break{height:460px;position:relative;overflow:hidden}
-.pb-img{
-  position:absolute;inset:0;
-  background-image:url('images/horses-sand-desert.jpg');
-  background-size:cover;background-position:center 40%;
-}
-.pb-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to bottom,rgba(10,10,8,0.3) 0%,rgba(10,10,8,0.65) 100%);
-  display:flex;align-items:center;padding:0 80px;
-}
-.pb-text blockquote{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(1.5rem,3vw,2.3rem);
-  font-weight:400;font-style:italic;color:var(--white);
-  line-height:1.35;margin-bottom:18px;max-width:500px;
-}
-.pb-text cite{
-  font-size:0.75rem;font-weight:500;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--sand);font-style:normal;
-}
-
-/* GUIDES */
-.guides-section{background:var(--peer);padding:96px 40px}
-.guides-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:14px;margin-top:44px;
-}
-.guide-card{
-  background:var(--white);border:1px solid var(--border);
-  border-radius:2px;padding:26px 22px 44px;
-  text-decoration:none;display:block;position:relative;
-  transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s;
-}
-.guide-card:hover{
-  border-color:var(--sand);transform:translateY(-2px);
-  box-shadow:0 8px 28px rgba(0,0,0,0.07);
-}
-.guide-tag{
-  font-size:0.63rem;font-weight:600;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--accent);margin-bottom:8px;display:block;
-}
-.guide-card h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.15rem;font-weight:600;color:var(--ink);
-  margin-bottom:6px;line-height:1.3;
-}
-.guide-card p{font-size:0.8rem;line-height:1.62;color:var(--mid)}
-.guide-arrow{
-  position:absolute;bottom:18px;right:18px;
-  width:26px;height:26px;border-radius:50%;
-  background:var(--peer);display:flex;align-items:center;justify-content:center;
-  font-size:0.85rem;color:var(--accent);transition:background 0.2s,color 0.2s;
-}
-.guide-card:hover .guide-arrow{background:var(--accent);color:var(--white)}
-.guides-all{text-align:center;margin-top:32px}
-.guides-all a{
-  font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
-  color:var(--accent);text-decoration:none;
-  border-bottom:1.5px solid var(--sand-light);padding-bottom:2px;
-  transition:color 0.2s,border-color 0.2s;
-}
-.guides-all a:hover{color:var(--accent-dark);border-color:var(--accent)}
-
-/* PAT */
-.pat-wrap{max-width:1100px;margin:0 auto;padding:96px 40px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.pat-img-wrap{position:relative}
-.pat-img{
-  width:100%;aspect-ratio:4/5;border-radius:2px;
-  background-image:url('images/pat-miazga-portrait.jpg');
-  background-size:cover;background-position:center 15%;
-}
-.pat-badge{
-  position:absolute;bottom:-18px;right:-18px;
-  background:var(--ink);color:var(--white);
-  padding:18px 22px;border-radius:2px;text-align:center;
-}
-.pat-badge-num{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2.1rem;font-weight:500;color:var(--sand);
-  display:block;line-height:1;
-}
-.pat-badge-label{
-  font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
-  color:rgba(255,255,255,0.45);margin-top:3px;display:block;
-}
-.pat-text p{font-size:0.93rem;line-height:1.82;color:var(--stone);margin-bottom:14px}
-.creds{
-  list-style:none;margin:24px 0 28px;padding:24px;
-  background:var(--peer);border-radius:2px;border-left:3px solid var(--sand);
-  display:flex;flex-direction:column;gap:9px;
-}
-.creds li{
-  font-size:0.8rem;line-height:1.6;color:var(--stone);
-  padding-left:18px;position:relative;
-}
-.creds li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:700;font-size:0.72rem}
-.pat-contact{font-size:0.82rem;color:var(--mid);margin-top:12px}
-.pat-contact a{color:var(--accent);text-decoration:none}
-
-/* FORM */
-.form-section{background:var(--ink);padding:96px 40px}
-.form-inner{max-width:700px;margin:0 auto;text-align:center}
-.form-section .eyebrow{color:var(--sand)}
-.form-section .section-title{color:var(--white)}
-.form-intro{font-size:0.98rem;line-height:1.72;color:rgba(255,255,255,0.52);margin:0 auto 44px;max-width:500px}
-.contact-form{text-align:left}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
-.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
-.fg label{font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35)}
-.fg input,.fg select,.fg textarea{
-  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);
-  border-radius:2px;padding:13px 15px;color:var(--white);
-  font-family:'Inter',sans-serif;font-size:0.88rem;outline:none;
-  transition:border-color 0.2s;-webkit-appearance:none;
-}
-.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,0.18)}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--sand)}
-.fg select option{background:var(--ink)}
-.fg textarea{resize:vertical;min-height:110px}
-.form-btn{
-  width:100%;background:var(--accent);color:var(--white);
-  border:none;padding:15px;border-radius:2px;
-  font-family:'Inter',sans-serif;font-size:0.83rem;font-weight:600;
-  letter-spacing:0.08em;text-transform:uppercase;
-  cursor:pointer;transition:background 0.2s;margin-top:6px;
-}
-.form-btn:hover{background:var(--accent-dark)}
-.form-note{font-size:0.7rem;color:rgba(255,255,255,0.22);text-align:center;margin-top:14px;line-height:1.6}
-
-/* FOOTER */
-footer{
-  background:rgba(0,0,0,0.25);border-top:1px solid rgba(255,255,255,0.06);
-  padding:32px 40px;display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:14px;
-}
-.footer-brand{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-weight:500;color:var(--sand)}
-.footer-links{display:flex;gap:22px;flex-wrap:wrap}
-.footer-links a{font-size:0.72rem;color:rgba(255,255,255,0.32);text-decoration:none;transition:color 0.2s}
-.footer-links a:hover{color:var(--sand)}
-.footer-legal{font-size:0.67rem;color:rgba(255,255,255,0.18);width:100%;text-align:center;margin-top:6px}
-
-/* KEYFRAMES */
-@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-@keyframes pulse{0%,100%{opacity:0.35}50%{opacity:0.9}}
-
-/* MOBILE */
-@media(max-width:768px){
-  nav{padding:16px 20px}
-  nav.scrolled{padding:12px 20px}
-  .nav-links{display:none}
-  .section{padding:60px 20px}
-  .why-grid{grid-template-columns:1fr}
-  .why-card{border-right:none!important;border-bottom:1px solid var(--border)!important}
-  .why-card:last-child{border-bottom:none!important}
-  .cmp-grid{grid-template-columns:1fr;gap:2px}
-  .cmp-vs{padding:10px 0;transform:rotate(90deg)}
-  .photo-break{height:auto}
-  .pb-overlay{padding:60px 24px}
-  .guides-grid{grid-template-columns:1fr}
-  .pat-wrap{grid-template-columns:1fr;gap:44px;padding:60px 20px}
-  .pat-badge{bottom:-12px;right:12px}
-  .form-row{grid-template-columns:1fr}
-  .stat-item{padding:12px 20px}
-  footer{flex-direction:column;align-items:flex-start;padding:24px 20px}
-}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-
-/* INTERIM ADDITIONS */
-.help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
-.help-card{background:var(--white);border:1px solid var(--border);border-radius:2px;padding:32px 28px}
-.help-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--ink);margin-bottom:10px}
-.help-card p{font-size:0.92rem;line-height:1.75;color:var(--stone)}
-.res-band{background:var(--peer);padding:72px 40px;text-align:center}
-.res-band p{max-width:560px;margin:0 auto 26px;font-size:1rem;line-height:1.75;color:var(--stone)}
-.pat-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:2px;display:block}
-.consent{display:flex;gap:10px;align-items:flex-start;margin:6px 0 16px}
-.consent input{margin-top:4px;accent-color:var(--accent)}
-.consent label{font-size:0.74rem;line-height:1.6;color:rgba(255,255,255,0.55)}
-.consent a,.form-note a,.footer-legal a{color:var(--sand)}
-.footer-legal{max-width:900px;margin-left:auto;margin-right:auto}
-@media(max-width:768px){.help-grid{grid-template-columns:1fr}.res-band{padding:56px 24px}}
-
-</style>
+<link rel="preload" href="/assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="stylesheet" href="/assets/css/brand.css"/>
+<link rel="stylesheet" href="/assets/css/site.css"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://southokanaganmove.ca/#website", "url": "https://southokanaganmove.ca/", "name": "South Okanagan Move", "publisher": {"@id": "https://southokanaganmove.ca/#org"}}, {"@type": "Organization", "@id": "https://southokanaganmove.ca/#org", "name": "South Okanagan Move", "url": "https://southokanaganmove.ca/"}, {"@type": "Person", "@id": "https://southokanaganmove.ca/#pat", "name": "Pat Miazga", "jobTitle": "REALTOR®", "url": "https://southokanaganmove.ca/about/", "knowsLanguage": ["English", "Polish"], "worksFor": {"@type": "Organization", "name": "eXp Realty of Canada, Inc."}}]}</script>
 </head>
 <body>
-<nav id="mainNav">
-  <a href="/" class="nav-logo">South Okanagan Move</a>
-  <ul class="nav-links">
-    <li><a href="#help">How I Can Help</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#pat">About Pat</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Get In Touch</a>
-</nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="/">South Okanagan <span>Move</span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main"><ul><li><a href="/moving-to-south-okanagan/">Moving here</a></li><li><a href="/living-in-osoyoos/">Osoyoos</a></li><li><a href="/living-in-oliver/">Oliver</a></li><li><a href="/living-on-anarchist-mountain/">Anarchist Mountain</a></li><li><a href="/buying-rural-property-bc/">Rural property</a></li><li><a href="/buying-home-south-okanagan/">Buying</a></li><li><a href="/about/">About Pat</a></li></ul></nav>
+<a class="btn btn-sm" href="/contact/">Ask Pat</a>
+</div></header>
+<main id="main">
+
+<div class="wrap">
 <section class="hero">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <span class="hero-eyebrow">REALTOR® Pat Miazga · eXp Realty</span>
-    <h1 class="hero-headline">Your Move to the<br/><em>South Okanagan</em> Starts Here</h1>
-    <p class="hero-sub">Explore real estate and relocation opportunities throughout Osoyoos, Oliver, Penticton, Okanagan Falls, Anarchist Mountain, and surrounding communities with REALTOR® Pat Miazga of eXp Realty.</p>
-    <div class="hero-actions">
-      <a href="https://patmiazga.com/" class="btn-primary">Explore South Okanagan Real Estate Resources</a>
-      <a href="#contact" class="btn-ghost">Talk to Pat</a>
-    </div>
-  </div>
+<div>
+<span class="eyebrow">Pat Miazga, REALTOR® &middot; eXp Realty</span>
+<h1>Find your place in the South Okanagan.</h1>
+<p class="lede">Practical guidance for buying property, relocating, and building a life in Osoyoos, Oliver, and the surrounding South Okanagan.</p>
+<div class="actions"><a class="btn" href="/contact/">Planning a move? Ask Pat.</a><a class="btn btn-ghost" href="#communities">Explore the communities</a></div>
+<p class="routes"><span>Where to start:</span> <a href="/osoyoos-vs-oliver/">Compare Osoyoos and Oliver</a> <a href="/buying-rural-property-bc/">Check a rural property</a> <a href="/moving-from-vancouver-to-south-okanagan/">Moving from Vancouver</a></p>
+</div>
+<img src="/images/vineyard-escarpment-lake-wide.jpg" srcset="/images/s/vineyard-escarpment-lake-wide-640.jpg 640w, /images/vineyard-escarpment-lake-wide.jpg 1200w" sizes="(max-width:900px) 100vw, 560px" width="1200" height="903" alt="Green vineyard blocks and a blue lake below dry, rocky hills in the South Okanagan" loading="eager" fetchpriority="high" decoding="async"/>
 </section>
-<section class="section" id="help">
-  <div class="section-inner">
-    <span class="eyebrow">How I can help</span>
-    <h2 class="section-title">Buying, selling or relocating —<br/><em>practical guidance, no pressure.</em></h2>
-    <p class="section-intro">Whether you are researching from out of town or already here, I will give you a straight read on the property and the process.</p>
-    <div class="help-grid">
-      <div class="help-card"><h3>Buying</h3><p>Homes, acreage and townhomes across the South Okanagan, with attention to construction quality, renovation needs and hidden costs.</p></div>
-      <div class="help-card"><h3>Selling</h3><p>Honest advice on preparing and pricing your property, drawing on hands-on construction and renovation experience.</p></div>
-      <div class="help-card"><h3>Relocating</h3><p>I moved to the South Okanagan from the Lower Mainland about three years ago, so I know the questions that come with a move.</p></div>
-    </div>
-  </div>
+</div>
+
+<section class="section alt" id="communities">
+<div class="wrap">
+<h2>Three places to start</h2>
+<p class="lede" style="margin-bottom:2em">Each community has a different feel and different practical questions. These guides cover the ones most buyers ask about first.</p>
+<div class="grid3">
+<article class="card"><img src="/images/osoyoos-lake-town-panoramic.jpg" srcset="/images/s/osoyoos-lake-town-panoramic-640.jpg 640w, /images/osoyoos-lake-town-panoramic.jpg 1400w" sizes="(max-width:900px) 100vw, 360px" width="1400" height="1054" alt="Osoyoos Lake on a clear day with the town and hills on the far shore" loading="lazy" decoding="async"/>
+<div class="body"><h3>Living in Osoyoos</h3><p>A lakeside town at the south end of the valley, next to the U.S. border, with a strong seasonal rhythm.</p><a class="more stretch" href="/living-in-osoyoos/">Read the Osoyoos guide</a></div></article>
+<article class="card"><img src="/images/oliver-wine-capital-sign.jpg" srcset="/images/s/oliver-wine-capital-sign-640.jpg 640w, /images/oliver-wine-capital-sign.jpg 1000w" sizes="(max-width:900px) 100vw, 360px" width="1000" height="752" alt="Welcome sign for Oliver among trees and vineyard rows" loading="lazy" decoding="async"/>
+<div class="body"><h3>Living in Oliver</h3><p>An agricultural and wine-growing town about 27 km south of Penticton, home to the South Okanagan General Hospital.</p><a class="more stretch" href="/living-in-oliver/">Read the Oliver guide</a></div></article>
+<article class="card"><img src="/images/osoyoos-valley-anarchist-above.jpg" srcset="/images/s/osoyoos-valley-anarchist-above-640.jpg 640w, /images/osoyoos-valley-anarchist-above.jpg 1400w" sizes="(max-width:900px) 100vw, 360px" width="1400" height="1054" alt="Hillside above the Osoyoos valley with farmland and Osoyoos Lake below" loading="lazy" decoding="async"/>
+<div class="body"><h3>Living on Anarchist Mountain</h3><p>A rural residential area above Osoyoos where wells, septic systems, access roads and wildfire preparedness matter.</p><a class="more stretch" href="/living-on-anarchist-mountain/">Read the Anarchist Mountain guide</a></div></article>
+</div>
+</div>
 </section>
-<section class="res-band" id="resources">
-  <span class="eyebrow">Resources</span>
-  <h2 class="section-title">Community information and property research</h2>
-  <p>My existing community information, property research and other real estate resources are on PatMiazga.com.</p>
-  <a href="https://patmiazga.com/" class="btn-primary">Explore South Okanagan Real Estate Resources</a>
+
+<section class="section">
+<div class="wrap grid2">
+<div class="feature">
+<h3>Relocation guide</h3>
+<p>What life here is like, how the communities differ, how the seasons feel, and what tends to surprise people who move from the Lower Mainland, Alberta or elsewhere.</p>
+<p><a class="more" href="/moving-to-south-okanagan/">Read: Moving to the South Okanagan</a></p>
+<p><a href="/moving-from-vancouver-to-south-okanagan/">Moving from Vancouver to the South Okanagan</a></p>
+</div>
+<div class="feature">
+<h3>Property due diligence</h3>
+<p>Wells, septic systems, road access, zoning, the Agricultural Land Reserve and wildfire insurance: the checks that matter most when you buy outside town.</p>
+<p><a class="more" href="/buying-rural-property-bc/">Read: Buying rural property in BC</a></p>
+<p><a href="/buying-home-south-okanagan/">Buying a home in the South Okanagan</a></p>
+</div>
+</div>
 </section>
-<section id="pat">
-  <div class="pat-wrap">
-    <div class="pat-img-wrap">
-      <img class="pat-photo" src="images/pat-miazga-realtor-portrait.jpg" alt="Pat Miazga, REALTOR® with eXp Realty, seated at a desk in a navy blazer" width="800" height="1000" loading="lazy"/>
-    </div>
-    <div class="pat-text">
-      <span class="eyebrow">About Pat</span>
-      <h2 class="section-title">Pat Miazga<br/><em>REALTOR® with eXp Realty</em></h2>
-      <p>I have been a REALTOR® since 2004, with more than 20 years of real estate experience, primarily in the Lower Mainland. About three years ago I moved to the South Okanagan, where I now live on Anarchist Mountain.</p>
-      <p>My approach is practical and low-pressure. I also bring hands-on construction and renovation experience to help you judge a property's condition, systems and long-term value.</p>
-      <ul class="creds">
-        <li>REALTOR® since 2004</li>
-        <li>20+ years of real estate experience, primarily in the Lower Mainland</li>
-        <li>Hands-on construction and renovation experience</li>
-        <li>Relocated to the South Okanagan about three years ago</li>
-        <li>English and Polish</li>
-      </ul>
-      <a href="#contact" class="btn-primary">Start the conversation</a>
-      <p class="pat-contact" style="margin-top:14px">Or call: <a href="tel:6045625982">604-562-5982</a></p>
-    </div>
-  </div>
+
+<section class="section alt">
+<div class="wrap about-split">
+<img src="/images/pat-miazga-realtor-portrait.jpg" srcset="/images/s/pat-miazga-realtor-portrait-640.jpg 640w, /images/pat-miazga-realtor-portrait.jpg 800w" sizes="(max-width:900px) 360px, 340px" width="800" height="1000" alt="Pat Miazga, REALTOR® with eXp Realty, in a navy blazer and white shirt" loading="lazy" decoding="async"/>
+<div>
+<h2>About Pat</h2>
+<p>Pat Miazga has been a REALTOR® in British Columbia since 2004. His real estate experience was built primarily in the Lower Mainland and includes residential and commercial property, along with construction, renovations and project management.</p>
+<p>About three years ago he moved his family from the Lower Mainland to Anarchist Mountain, so he has been through the relocation process himself. He works with eXp Realty and offers practical, low-pressure advice.</p>
+<p><a href="/about/">More about Pat</a></p>
+</div>
+</div>
 </section>
-<section class="form-section" id="contact">
-  <div class="form-inner">
-    <span class="eyebrow">Get in touch</span>
-    <h2 class="section-title">Buying, selling or<br/><em style="color:var(--sand)">relocating?</em></h2>
-    <p class="form-intro">Tell me where you are at and how I can help. No pressure, no commitment.</p>
-    <form class="contact-form" action="https://formspree.io/f/xzdqkvra" method="POST">
-      <input type="hidden" name="_subject" value="southokanaganmove.ca — Inquiry"/>
-      <input type="hidden" name="source" value="southokanaganmove.ca"/>
-      <div class="form-row">
-        <div class="fg"><label for="fn">First Name</label><input id="fn" type="text" name="first_name" autocomplete="given-name" required/></div>
-        <div class="fg"><label for="ln">Last Name</label><input id="ln" type="text" name="last_name" autocomplete="family-name" required/></div>
-      </div>
-      <div class="form-row">
-        <div class="fg"><label for="em">Email</label><input id="em" type="email" name="email" autocomplete="email" required/></div>
-        <div class="fg"><label for="ph">Phone (optional)</label><input id="ph" type="tel" name="phone" autocomplete="tel"/></div>
-      </div>
-      <div class="fg">
-        <label for="help">I would like help with</label>
-        <select id="help" name="interest" required>
-          <option value="">Select one</option>
-          <option>Buying</option>
-          <option>Selling</option>
-          <option>Relocating to the South Okanagan</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-      <div class="fg">
-        <label for="mf">Where are you moving from? (optional)</label>
-        <input id="mf" type="text" name="moving_from"/>
-      </div>
-      <div class="fg"><label for="msg">Message</label><textarea id="msg" name="message"></textarea></div>
-      <div class="consent">
-        <input type="checkbox" id="consent" name="consent" value="yes" required/>
-        <label for="consent">I agree that Pat Miazga may contact me by email or phone about my inquiry. I can withdraw consent at any time. See the <a href="privacy.html">privacy notice</a>.</label>
-      </div>
-      <button type="submit" class="form-btn">Send Message →</button>
-      <p class="form-note">Your information is used to respond to your inquiry. See the <a href="privacy.html">privacy notice</a>.</p>
-    </form>
-  </div>
+
+<section class="section">
+<div class="wrap grid2">
+<div>
+<h2 style="margin-top:0">Key articles</h2>
+<ul>
+<li><a href="/moving-to-south-okanagan/">Moving to the South Okanagan</a></li>
+<li><a href="/osoyoos-vs-oliver/">Osoyoos vs. Oliver: which suits you?</a></li>
+<li><a href="/buying-rural-property-bc/">Buying rural property in BC</a></li>
+<li><a href="/moving-from-vancouver-to-south-okanagan/">Moving from Vancouver to the South Okanagan</a></li>
+<li><a href="/buying-home-south-okanagan/">Buying a home in the South Okanagan</a></li>
+</ul>
+<p>Every guide is free to read. Nothing is behind an email form.</p>
+<h3>More from Pat</h3>
+<ul>
+<li><a href="https://osoyoosliving.ca" rel="noopener">Osoyoos Living: a year in Osoyoos</a></li>
+<li><a href="https://anarchistliving.ca" rel="noopener">Anarchist Living: life on Anarchist Mountain</a></li>
+<li><a href="https://patmiazga.com" rel="noopener">PatMiazga.com: guides, communities and listings</a></li>
+</ul>
+</div>
+<div id="ask">
+<h2 style="margin-top:0">Planning a move? Ask Pat.</h2>
+<p>Tell Pat where you are in the process. Phone: <a href="tel:+16045625982">604-562-5982</a>.</p>
+<form class="form" action="https://formspree.io/f/xzdqkvra" method="POST">
+<input type="hidden" name="_subject" value="southokanaganmove.ca inquiry"/>
+<input type="hidden" name="source" value="southokanaganmove.ca"/>
+<input type="hidden" name="_next" value="https://southokanaganmove.ca/contact/thank-you/"/>
+<div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"/></label></div>
+<div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required/></div>
+<div class="row">
+<div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required/></div>
+<div class="field"><label for="f-phone">Phone <span class="opt">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"/></div>
+</div>
+<div class="row">
+<div class="field"><label for="f-area">Area of interest</label><select id="f-area" name="area_of_interest">
+<option value="">Select one</option><option>Osoyoos</option><option>Oliver</option><option>Anarchist Mountain</option><option>Other South Okanagan community</option><option>Not sure yet</option></select></div>
+<div class="field"><label for="f-time">Relocation timeframe</label><select id="f-time" name="timeframe">
+<option value="">Select one</option><option>Within 3 months</option><option>3 to 6 months</option><option>6 to 12 months</option><option>More than a year</option><option>Just researching</option></select></div>
+</div>
+<div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Where are you now, what are you looking for, and what would help most?"></textarea></div>
+<div class="consent"><input id="f-consent" name="consent" type="checkbox" value="yes" required/>
+<label for="f-consent">I agree that Pat Miazga may contact me by email or phone about my inquiry. I can withdraw my consent at any time. See the <a href="/privacy.html">privacy notice</a>.</label></div>
+<button class="btn" type="submit">Send message</button>
+<p class="note">Your message is sent to Pat through Formspree, a third-party form service. See the <a href="/privacy.html">privacy notice</a>.</p>
+</form>
+</div>
+</div>
 </section>
-<footer style="background:var(--ink)">
-  <span class="footer-brand">South Okanagan Move</span>
-  <div class="footer-links">
-    <a href="https://patmiazga.com/">PatMiazga.com resources</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="tel:6045625982">604-562-5982</a>
-  </div>
-  <p class="footer-legal">Pat Miazga, REALTOR® · eXp Realty</p>
-</footer>
-<script>
-const nav=document.getElementById('mainNav');
-window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
-</script>
+
+
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="grid">
+<div><p class="brand" style="margin-bottom:.5em">South Okanagan Move</p>
+<p>Practical guidance for buying property, relocating, and building a life in the South Okanagan.</p></div>
+<div><h2>Explore</h2><ul><li><a href="/moving-to-south-okanagan/">Moving here</a></li><li><a href="/living-in-osoyoos/">Osoyoos</a></li><li><a href="/living-in-oliver/">Oliver</a></li><li><a href="/living-on-anarchist-mountain/">Anarchist Mountain</a></li><li><a href="/buying-rural-property-bc/">Rural property</a></li><li><a href="/buying-home-south-okanagan/">Buying</a></li><li><a href="/about/">About Pat</a></li><li><a href="/osoyoos-vs-oliver/">Osoyoos vs. Oliver</a></li><li><a href="/moving-from-vancouver-to-south-okanagan/">Moving from Vancouver</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy.html">Privacy notice</a></li></ul></div>
+<div><h2>Contact</h2><p>Pat Miazga, REALTOR®<br/>Phone: <a href="tel:+16045625982">604-562-5982</a></p>
+<p><a class="btn btn-sm" href="/contact/">Planning a move? Ask Pat.</a></p></div>
+</div>
+<div class="legal">
+<div class="pm-brokerage-block"><img class="pm-brokerage-block__logo" src="/assets/img/exp-realty-logo-white.svg" alt="eXp Realty" width="108" height="56"/><div class="pm-brokerage-block__text">
+<p class="name">Pat Miazga, REALTOR®</p>
+<p>eXp Realty (eXp Realty of Canada, Inc.)</p>
+<p>645 Main Street, Penticton, BC V2A 5C9 &middot; Brokerage phone (833) 817-6506</p>
+<p>BCFSA licence #138735</p></div></div>
+<p>Information on this website is general in nature and is not legal, tax, financial or engineering advice. Confirm details with the relevant authority or a qualified professional before relying on them.</p>
+</div></div></footer>
+<script src="/assets/js/site.js" defer></script>
 </body>
 </html>
