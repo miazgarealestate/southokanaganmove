@@ -17,6 +17,7 @@ NAV = [
     ('/living-in-oliver/', 'Oliver'),
     ('/living-on-anarchist-mountain/', 'Anarchist Mountain'),
     ('/buying-rural-property-bc/', 'Rural property'),
+    ('/guides/', 'Guides'),
     ('/buying-home-south-okanagan/', 'Buying'),
     ('/about/', 'About Pat'),
 ]
@@ -57,6 +58,8 @@ FORM_NEXT = os.environ.get('FORM_NEXT', 'https://southokanaganmove.ca/contact/th
 FORM = '''<form class="form" action="__FORM_ACTION__" method="POST">
 <input type="hidden" name="_subject" value="southokanaganmove.ca inquiry"/>
 <input type="hidden" name="source" value="southokanaganmove.ca"/>
+<input type="hidden" name="guide" value=""/>
+<input type="hidden" name="guide_title" value=""/>
 <input type="hidden" name="_next" value="__FORM_NEXT__"/>
 <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"/></label></div>
 <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required/></div>
@@ -182,7 +185,7 @@ def page(meta):
         url, out, cur = SITE + '/', 'index.html', '/'
     else:
         out = meta.get('out') or f'{slug}/index.html'
-        url = SITE + ('/' + out if out.endswith('.html') else f'/{slug}/')
+        url = SITE + ('/' + out[:-len('index.html')] if out.endswith('/index.html') else '/' + out if out.endswith('.html') else f'/{slug}/')
         cur = '/' + slug + '/' if not meta.get('out') else '/' + out
     og = meta.get('image') or OG_DEFAULT
     noindex = '<meta name="robots" content="noindex,follow"/>\n' if meta.get('noindex') == 'yes' else ''
